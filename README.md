@@ -1,19 +1,29 @@
-# 🎈 Blank app template
+# 서버 모니터링 대시보드
 
-A simple Streamlit app template for you to modify!
+서버의 상태와 API 엔드포인트를 모니터링하기 위한 Streamlit 기반 대시보드입니다.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## 주요 기능
 
-### How to run it on your own machine
+- 서버 상태 실시간 모니터링
+- API 엔드포인트 응답 테스트
+- 응답 시간 측정
+- 자동 갱신 기능
 
-1. Install the requirements
+## 설치 방법
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+```bash
+pip install -r requirements.txt
+```
 
-2. Run the app
+## 실행 방법
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+```bash
+streamlit run app.py
+```
+
+## 사용 방법
+
+1. 사이드바에서 모니터링할 서버 URL 입력
+2. 갱신 주기 설정 (1-60초)
+3. API 엔드포인트 목록 입력 후 테스트 실행
+4. 필요시 자동 갱신 활성화
