@@ -1,18 +1,24 @@
-# 서버 모니터링 대시보드
+# 고양이 분석 POC
 
-서버의 상태와 API 엔드포인트를 모니터링하기 위한 Streamlit 기반 대시보드입니다.
+고양이에 관련된 특성을 분석하는 POC 페이지입니다.
 
 ## 주요 기능
 
-- 서버 상태 실시간 모니터링
-- API 엔드포인트 응답 테스트
-- 응답 시간 측정
-- 자동 갱신 기능
+- 고양이 색상 추출
+- 고양이 자세/행동 태깅
 
 ## 설치 방법
 
 ```bash
-pip install -r requirements.txt
+python3.12 -m venv .venv
+source .venv/bin/activate
+poetry install
+```
+
+## 패키지 업데이트
+
+```bash
+poetry export -f requirements.txt
 ```
 
 ## 실행 방법
@@ -20,10 +26,3 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
-
-## 사용 방법
-
-1. 사이드바에서 모니터링할 서버 URL 입력
-2. 갱신 주기 설정 (1-60초)
-3. API 엔드포인트 목록 입력 후 테스트 실행
-4. 필요시 자동 갱신 활성화

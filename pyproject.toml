@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "daily-nyang-status"
+version = "0.1.0"
+description = ""
+authors = ["kimbyeongcheol <byeongcheol.kim@wesang.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+streamlit = "^1.41.1"
+requests = "^2.32.3"
+pandas = "^2.2.3"
+google-generativeai = "^0.8.3"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.14.1"
+black = "^24.10.0"
+isort = "^5.13.2"
+flake8 = "^7.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
