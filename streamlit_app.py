@@ -41,7 +41,7 @@ if image_file:
             st.subheader("🐱 고양이 자세/행동")
             tags_html = " ".join(
                 [
-                    f'<span style="background-color: #f0f2f6; padding: 0.2rem 0.6rem; '  # noqa: E501
+                    f'<span style="background-color: #f0f2f6; color: #000000; padding: 0.2rem 0.6rem; '  # noqa: E501
                     f'border-radius: 1rem; margin-right: 0.3rem">{tag}</span>'
                     for tag in result.get("image_tags", [])
                 ]
