@@ -2,7 +2,6 @@ from typing import Any, Dict, Optional
 
 import streamlit as st
 from PIL import Image
-from PIL.ImageFile import ImageFile
 from streamlit.runtime.uploaded_file_manager import UploadedFile
 
 from src.services.structure_gemini import GeminiService
@@ -26,7 +25,8 @@ if image_file:
 
     with img_col:
         print(image_file.name)
-        image: ImageFile = Image.open(image_file)
+        image: Image.Image = Image.open(image_file)
+        image = image.convert("RGB")
         image.save("temp.jpg", "JPEG")
         st.image(image, caption="업로드된 이미지", use_container_width=True)
 
