@@ -12,6 +12,8 @@ class ResponseSchema(TypedDict):
     is_cat: bool
     image_tags: list[str]
     color_codes: list[str]
+    breed_type: str
+    age: int
 
 
 class GeminiService:
