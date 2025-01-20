@@ -68,7 +68,7 @@ if image_file:
                         st.write(color_code)
 
             # 종류 정보 표시
-            st.subheader("😻 고양이 종류")
+            st.subheader("😻 고양이 품종")
             st.write(result.get("breed_type", ""))
 
             # 나이 정보 표시
