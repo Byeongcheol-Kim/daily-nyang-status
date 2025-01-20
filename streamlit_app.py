@@ -73,4 +73,4 @@ if image_file:
 
             # 나이 정보 표시
             st.subheader("😸 고양이 나이")
-            st.write(result.get("age", ""))
+            st.write(f"{result.get('age', '')}개월")
