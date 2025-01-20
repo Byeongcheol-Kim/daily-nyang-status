@@ -41,6 +41,12 @@ class GeminiService:
                         type=content.Type.STRING,
                     ),
                 ),
+                "breed_type": content.Schema(
+                    type=content.Type.STRING,
+                ),
+                "age": content.Schema(
+                    type=content.Type.INTEGER,
+                ),
             },
         ),
         "response_mime_type": "application/json",
@@ -96,6 +102,12 @@ class GeminiService:
     3. 고양이 색상을 분류하고 color_codes 필드에 색상 코드를 부여합니다. 색상 코드는 중복으로 부여할 수 있습니다.
       고양이가 여러마리 있는 경우에는 가장 큰 고양이를 기준으로 합니다.\n
     기대하는 응답 ex) "#000000", "#FFFFFF", "#FF0000"\n
+    4. 고양이 종류를 분류하고 breed_type 필드에 종류를 부여합니다.
+      고양이가 여러마리 있는 경우에는 가장 큰 고양이를 기준으로 합니다.\n
+    기대하는 응답 ex) "러시안블루", "브리티시쇼트헤어", "랙돌", "랙돌"\n
+    5. 고양이 나이를 분류하고 age 필드에 나이(개월수)를 부여합니다.
+      고양이가 여러마리 있는 경우에는 가장 큰 고양이를 기준으로 합니다.\n
+    기대하는 응답 ex) 2, 4, 12, 45\n
     """
     MODEL = genai.GenerativeModel(
         model_name="gemini-2.0-flash-exp",

@@ -66,3 +66,11 @@ if image_file:
                             label_visibility="visible",
                         )
                         st.write(color_code)
+
+            # 종류 정보 표시
+            st.subheader("😻 고양이 종류")
+            st.write(result.get("breed_type", ""))
+
+            # 나이 정보 표시
+            st.subheader("😸 고양이 나이")
+            st.write(result.get("age", ""))
